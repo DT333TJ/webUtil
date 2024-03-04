@@ -1,0 +1,1 @@
+export default (thing: unknown) => thing !== null && typeof thing === 'object';

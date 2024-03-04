@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "target": "ES5",
+    "declaration": true, /* 生成相关的 '.d.ts' 文件。 */ 
+    "declarationDir": "./dist", /* '.d.ts' 文件输出目录 */ 
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["lib/**/*", "index.ts"],
+  "exclude": ["test/**/*"],
+}

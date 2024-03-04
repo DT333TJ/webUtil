@@ -1,0 +1,43 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "web utils",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon",
+    "prerollup": "if exist dist rmdir /s/q dist",
+    "rollup": "pnpm prerollup && rollup --config rollup.config.lib.mjs && pnpm postrollup",
+    "postrollup": "rollup --config rollup.config.index.mjs"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "author": "吴智勇",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.0.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "18.11.19",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "axios": "^1.6.5",
+    "eslint": "^8.56.0",
+    "glob": "^10.3.10",
+    "nodemon": "^3.0.3",
+    "rollup": "^4.9.6",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/test/**"
+    ],
+    "exec": "ts-node index.ts",
+    "watch": "index.ts"
+  }
+}
